@@ -1,0 +1,20 @@
+# ---- 密钥 / 真实配置（用 *.example 作模板，勿提交）----
+.env
+brand_exclusions.json
+
+# ---- 运行时数据 / 状态 ----
+**/data/
+seen_channels.json
+local_cache/
+output/
+_archive/
+
+# ---- 缓存 ----
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# ---- 系统文件 ----
+.DS_Store

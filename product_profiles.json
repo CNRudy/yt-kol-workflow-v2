@@ -1,0 +1,287 @@
+{
+  "active": "baby_car_camera_us",
+  "profiles": {
+    "youth_soccer_shin_guard": {
+      "name": "适合 18 岁以下的足球护膝(Shin Guards)",
+      "product_url": "",
+      "keywords": [
+        "soccer shin guards",
+        "shin guards",
+        "youth soccer shin guards",
+        "shin guards for kids",
+        "shin guards for youth",
+        "soccer gear for kids",
+        "youth soccer equipment",
+        "soccer shin guards for practice",
+        "best youth soccer shin guards",
+        "soccer mom",
+        "youth soccer",
+        "soccer training",
+        "kids soccer",
+        "indoor soccer",
+        "soccer equipment"
+      ],
+      "content_types": [
+        "评测",
+        "开箱",
+        "使用体验",
+        "种草",
+        "训练"
+      ],
+      "markets": [
+        "US"
+      ],
+      "min_views": 20000,
+      "min_engagement": 1.5
+    },
+    "mac_mini_dock": {
+      "name": "Stouchi Mac mini M4 扩展坞",
+      "product_url": "https://www.amazon.com/dp/B0GJ54TC4V",
+      "keywords": [
+        "mac mini",
+        "m4",
+        "mac mini m4",
+        "dock",
+        "扩展坞",
+        "usb-c hub",
+        "usb c hub",
+        "hub",
+        "desktop setup",
+        "桌面布置",
+        "macos",
+        "mac studio",
+        "thunderbolt",
+        "type-c",
+        "笔记本扩展"
+      ],
+      "content_types": [
+        "评测",
+        "开箱",
+        "使用体验",
+        "种草"
+      ],
+      "markets": [
+        "US",
+        "CA"
+      ],
+      "min_views": 50000,
+      "min_engagement": 2.0
+    },
+    "apple_accessory": {
+      "name": "Stouchi 苹果生态配件(通用)",
+      "product_url": "",
+      "keywords": [
+        "iphone",
+        "ipad",
+        "macbook",
+        "airpods",
+        "apple",
+        "苹果",
+        " charger",
+        "充电",
+        "cable",
+        "线缆",
+        "stand",
+        "支架",
+        "adapter",
+        "转接",
+        "usb-c"
+      ],
+      "content_types": [
+        "评测",
+        "开箱",
+        "使用体验",
+        "种草"
+      ],
+      "markets": [
+        "US",
+        "CA",
+        "DE"
+      ],
+      "min_views": 30000,
+      "min_engagement": 2.0
+    },
+    "magnetic_baby_car_camera_de": {
+      "name": "Magnetische Baby Autokamera (磁性婴儿车载摄像头)",
+      "product_url": "https://www.amazon.de/dp/B0F6N9PHHW",
+      "keywords": [
+        "Baby Autokamera",
+        "Baby Auto Monitor",
+        "Rücksitz Baby Monitor",
+        "baby car camera",
+        "baby car monitor",
+        "rear seat baby monitor",
+        "baby car seat camera",
+        "magnetic baby car camera",
+        "magnetische Halterung Baby",
+        "Baby Autositz Kamera",
+        "Nachtsicht Baby Kamera",
+        "night vision baby monitor car",
+        "rückwärtsgerichteter Kindersitz",
+        "rear facing car seat camera",
+        "Baby Reise Must Haves",
+        "baby travel essentials car",
+        "Roadtrip Baby",
+        "Erstausstattung Auto Baby",
+        "5 Zoll 1080P Baby Monitor",
+        "1080p baby car monitor",
+        "Spiegelmodus Baby Kamera",
+        "mirror mode baby camera",
+        "baby monitor ohne WLAN",
+        "baby camera no wifi",
+        "Autokamera Test",
+        "baby camera review"
+      ],
+      "content_types": [
+        "开箱",
+        "评测",
+        "使用体验",
+        "种草",
+        "安装"
+      ],
+      "markets": [
+        "DE"
+      ],
+      "min_views": 3000,
+      "min_engagement": 1.0
+    },
+    "airtag_passport_holder": {
+      "name": "Stouchi AirTag Passport Holder (AirTag护照包/护照夹, ASIN B0G1BTYYX6)",
+      "product_url": "https://www.amazon.com/dp/B0G1BTYYX6",
+      "keywords": [
+        "airtag",
+        "passport",
+        "passport holder",
+        "passport wallet",
+        "travel",
+        "travel accessories",
+        "travel wallet",
+        "anti-theft",
+        "anti theft",
+        "business travel",
+        "travel essentials",
+        "travel gear",
+        "edc",
+        "everyday carry",
+        "tracker",
+        "smart wallet",
+        "magnetic",
+        "minimalist",
+        "international travel",
+        "trip",
+        "vacation",
+        "luggage",
+        "carry on",
+        "must-have gadgets",
+        "wallet"
+      ],
+      "content_types": [
+        "开箱",
+        "评测",
+        "使用体验",
+        "种草"
+      ],
+      "markets": [
+        "US",
+        "CA"
+      ],
+      "min_views": 10000,
+      "min_engagement": 2.0
+    },
+    "baby_car_camera_us": {
+      "name": "WEMOH C1 Baby Car Camera (婴儿车载摄像头, ASIN B0F6N9PHHW)",
+      "product_url": "https://www.amazon.com/dp/B0F6N9PHHW",
+      "keywords": [
+        "baby car camera",
+        "baby car monitor",
+        "baby monitor",
+        "car camera",
+        "car seat",
+        "car mirror",
+        "rear facing",
+        "night vision",
+        "dash cam",
+        "back seat",
+        "baby car",
+        "car seat camera",
+        "babycam",
+        "carseat",
+        "backseat",
+        "mirror camera",
+        "travel baby",
+        "road trip baby",
+        "new parent",
+        "car essentials",
+        "baby car camera review",
+        "baby car camera unboxing",
+        "rear facing car seat must haves",
+        "baby travel essentials car",
+        "road trip with baby essentials",
+        "magnetic baby car camera"
+      ],
+      "content_types": [
+        "开箱",
+        "评测",
+        "使用体验",
+        "种草",
+        "安装"
+      ],
+      "markets": [
+        "US"
+      ],
+      "min_views": 3000,
+      "min_engagement": 1.0
+    },
+    "stroller_wagon": {
+      "name": "WEMOH 2-Seater Stroller Wagon (双人推车 Wagon, MCB001-WE)",
+      "product_url": "https://www.amazon.com/stores/WEMOH",
+      "keywords": [
+        "stroller wagon",
+        "wagon stroller",
+        "baby wagon",
+        "toddler wagon",
+        "wagon for kids",
+        "double stroller",
+        "double stroller wagon",
+        "push wagon",
+        "foldable wagon",
+        "beach wagon",
+        "wonderfold",
+        "veer cruiser",
+        "veer wagon",
+        "momfann",
+        "keenz",
+        "baby gear",
+        "baby essentials",
+        "toddler gear",
+        "mommy must haves",
+        "baby must haves",
+        "mom vlog",
+        "mom life",
+        "mom life hacks",
+        "parenting",
+        "family vlog",
+        "travel with toddler",
+        "toddler activities",
+        "kids outdoor",
+        "everyday mom",
+        "newborn",
+        "infant",
+        "pregnancy",
+        "stroller review",
+        "wagon review"
+      ],
+      "content_types": [
+        "评测",
+        "开箱",
+        "使用体验",
+        "种草"
+      ],
+      "markets": [
+        "US"
+      ],
+      "min_views": 5000,
+      "min_engagement": 1.5
+    }
+  }
+}
