@@ -33,8 +33,8 @@ ALL_TABLES = {
 }
 # 红人表 / 足球评分表不在 TABLE_IDS 里，直接用已知 ID
 EXTRA_TABLES = {
-    "hongren": ("红人表", "tblPKFENcpk8xnZH"),
-    "soccer_scores": ("足球红人匹配评分", "tble06acWNOPB6vX"),
+    "hongren": ("红人表", os.environ.get("FEISHU_HONGREN_TABLE_ID", "")),
+    "soccer_scores": ("足球红人匹配评分", os.environ.get("FEISHU_TABLE_SOCCER", "")),
 }
 for k, (name, tid) in EXTRA_TABLES.items():
     ALL_TABLES[k] = (name, tid)

@@ -65,7 +65,7 @@ class FeishuConfig:
             self.app_token = os.environ.get("FEISHU_APP_TOKEN", "")
         if not self.hongren_table_id:
             self.hongren_table_id = os.environ.get(
-                "FEISHU_HONGREN_TABLE_ID", "tblPKFENcpk8xnZH"
+                "FEISHU_HONGREN_TABLE_ID", ""
             ).strip()
         if not self.proxy:
             self.proxy = os.environ.get("FEISHU_HTTPS_PROXY", "").strip()

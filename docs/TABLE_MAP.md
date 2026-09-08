@@ -1,5 +1,12 @@
 # 飞书表映射 · 唯一真源（Single Source of Truth）
 
+> **本文件为脱敏模板**：真实 Base token / 表 ID / 租户域名已替换为占位符。
+> 运行人员请在项目内私有副本填写真实值，或通过 `.env` 环境变量传入。
+> 变量对应关系：`FEISHU_APP_TOKEN` / `FEISHU_TABLE_DETAIL` / `FEISHU_TABLE_VIDEO` /
+> `FEISHU_TABLE_INFLUENCER_VIDEO` / `FEISHU_TABLE_TASK` / `FEISHU_HONGREN_TABLE_ID`。
+
+
+
 > ⚠️ **任何脚本/会话在引用飞书表或本地缓存前，必须先读本文件。**
 > 历史事故：`videos.json` 被误当成「网红视频表」（实际是**视频数据表**），
 > 「网红视频表」的本地缓存是 `channel_videos.json`。两者名字容易反，以本表为准。
@@ -12,15 +19,15 @@
 
 | Base 名称 | base_token | 用途 | 状态 |
 |---|---|---|---|
-| **主库（母池）** | `VyH0bJ1WBaCKIWsn9gVcBVc4nmc` | 全产品线红人总表 | ✅ 在用 |
-| **WEMOH推车 MCB** | `Yz9GbeSbfabon9sS1DKcNY25ngm` | 母婴类 / 推车 wagon 专线 | ✅ 在用 |
+| **主库（母池）** | `<MAIN_BASE_TOKEN>` | 全产品线红人总表 | ✅ 在用 |
+| **WEMOH推车 MCB** | `<WAGON_BASE_TOKEN>` | 母婴类 / 推车 wagon 专线 | ✅ 在用 |
 | CFC1（AirTag 护照包） | `FIhJbkQjda3mmqsSq8Jc1pYNnch` | CFC1 项目 | 🗄 归档项目 |
 | ~~WEMOH推车Wagon网红库~~ | ~~`HFBkbxyQNa4pjYsrXOJcRwU5nHb`~~ | 推车旧源库 | ❌ **已删除**（2026-09-07），勿再引用 |
 | ~~WEMOH美国婴儿车载摄像头红人库~~ | 运行时创建 | — | 🗄 归档项目 |
-| 早期测试库（7月） | `JB3Vb82DuaaGKlswusmc71I8nKc` | 网红详情表 145 / 视频数据表 187 / 网红视频表 1450 | ⚠️ 遗留，**不是主库**。`feishu_sync_v2.py --reset` 会清空它 → 勿跑 |
+| 早期测试库（7月） | `<LEGACY_BASE_TOKEN>` | 网红详情表 145 / 视频数据表 187 / 网红视频表 1450 | ⚠️ 遗留，**不是主库**。`feishu_sync_v2.py --reset` 会清空它 → 勿跑 |
 
-主库链接：https://pcn8zy4grswl.feishu.cn/base/VyH0bJ1WBaCKIWsn9gVcBVc4nmc
-推车库链接：https://pcn8zy4grswl.feishu.cn/base/Yz9GbeSbfabon9sS1DKcNY25ngm
+主库链接：https://<your-tenant>.feishu.cn/base/<MAIN_BASE_TOKEN>
+推车库链接：https://<your-tenant>.feishu.cn/base/<WAGON_BASE_TOKEN>
 
 ---
 
@@ -28,12 +35,12 @@
 
 | 飞书表名 | table_id | 行数（2026-09-07） | 说明 |
 |---|---|---|---|
-| 网红详情表 | `tbl4rnFUM9jJXvCQ` | 1874 | **主表**，所有红人明细 |
-| 红人表 | `tblPKFENcpk8xnZH` | 1874 | **派生表**（由详情表同步，含人工跟进列） |
-| 视频数据表 | `tblDQi8dEGhkjZyy` | 6698 | 按关键词搜到的视频 |
-| 网红视频表 | `tblcHBORC90WWn05` | 22129（**已超限**） | ⚠️ 飞书端停同步，数据放本地 |
-| 搜索任务表 | `tblLT1yf9ioEhJOh` | 52 | 关键词爬取任务记录 |
-| 足球红人匹配评分 | `tble06acWNOPB6vX` | — | 足球线专项评分 |
+| 网红详情表 | `tbl<DETAIL>` | 1874 | **主表**，所有红人明细 |
+| 红人表 | `tbl<HONGREN>` | 1874 | **派生表**（由详情表同步，含人工跟进列） |
+| 视频数据表 | `tbl<VIDEO>` | 6698 | 按关键词搜到的视频 |
+| 网红视频表 | `tbl<INFLUENCER_VIDEO>` | 22129（**已超限**） | ⚠️ 飞书端停同步，数据放本地 |
+| 搜索任务表 | `tbl<TASK>` | 52 | 关键词爬取任务记录 |
+| 足球红人匹配评分 | `tbl<SOCCER_SCORES>` | — | 足球线专项评分 |
 
 > **网红视频表超限说明**：飞书报 `800040832` 行数上限，2026-09-03 决定「不再同步到飞书、数据留本地」。
 >
@@ -45,11 +52,11 @@
 
 | 飞书表名 | table_id | 字段数 | 行数 |
 |---|---|---|---|
-| 网红详情表 | `tblzPpg6Uj197wND` | 36 | 201 |
-| 红人表 | `tblIDj93S485Yn00` | 24 | 201 |
-| 视频数据表 | `tblD2u6OAVkyQLdF` | 19 | 766 |
-| 网红视频表 | `tblvBIWnJeK2FoS8` | 14 | 766 |
-| 搜索任务表 | `tblN15BrWVfGTeJy` | 11 | 10 |
+| 网红详情表 | `tbl<WAGON_DETAIL>` | 36 | 201 |
+| 红人表 | `tbl<WAGON_HONGREN>` | 24 | 201 |
+| 视频数据表 | `tbl<WAGON_VIDEO>` | 19 | 766 |
+| 网红视频表 | `tbl<WAGON_INFLUENCER_VIDEO>` | 14 | 766 |
+| 搜索任务表 | `tbl<WAGON_TASK>` | 11 | 10 |
 
 > 2026-09-07 已按「主表为主」补齐：详情表补 9 个主表有而 MCB 缺的字段，并从主表回填 148 行（只补空不覆盖）。
 > 同日删除「分类」「KOL Name」两个字段（产品名本身即代表类目；KOL Name 89% 是占位符「手动确认」）。
@@ -66,11 +73,11 @@
 
 | 本地文件 | 对应飞书表 | table_id | 记录数 |
 |---|---|---|---|
-| `influencers.json` | **网红详情表** | `tbl4rnFUM9jJXvCQ` | 1821（09-04 导出） |
-| `hongren.json` | **红人表** | `tblPKFENcpk8xnZH` | — |
-| `videos.json` | **视频数据表** ⚠️ | `tblDQi8dEGhkjZyy` | 5258（08-17 导出） |
-| `channel_videos.json` | **网红视频表** ⚠️ | `tblcHBORC90WWn05` | 6750（09-07 更新） |
-| `search_tasks.json` | **搜索任务表** | `tblLT1yf9ioEhJOh` | — |
+| `influencers.json` | **网红详情表** | `tbl<DETAIL>` | 1821（09-04 导出） |
+| `hongren.json` | **红人表** | `tbl<HONGREN>` | — |
+| `videos.json` | **视频数据表** ⚠️ | `tbl<VIDEO>` | 5258（08-17 导出） |
+| `channel_videos.json` | **网红视频表** ⚠️ | `tbl<INFLUENCER_VIDEO>` | 6750（09-07 更新） |
+| `search_tasks.json` | **搜索任务表** | `tbl<TASK>` | — |
 | `_index.json` | 索引本身 | — | — |
 
 **记忆口诀**：

@@ -97,10 +97,10 @@ def test_promo_level_options_cover_all_labels():
 
 def test_channel_bio_email_wins_over_video():
     found = extract_contact_email(
-        "For business inquiries: biz@creator.com",
-        ["contact me at other@video.com"],
+        "For business inquiries: biz@example.com",
+        ["contact me at other@example.com"],
     )
-    assert found["contact_email"] == "biz@creator.com"
+    assert found["contact_email"] == "biz@example.com"
     assert found["email_source"] == "频道简介"
 
 

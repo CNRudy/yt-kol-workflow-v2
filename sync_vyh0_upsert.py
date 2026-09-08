@@ -7,10 +7,10 @@ VyH0 Base，已存在的按唯一键更新、不存在的新建；存量 1505 �
 promo/邮箱等字段完全不动（Feishu record-upsert 是「按字段合并」语义）。
 
 同步范围：
-  - 网红详情表(tbl4rnFUM9jJXvCQ): 按 Channel ID upsert   ← 核心
-  - 搜索任务表(tblLT1yf9ioEhJOh): 按 搜索关键词 upsert
-  - 视频数据表(tblDQi8dEGhkjZyy): 按 Video ID upsert（搜索结果视频）
-  - 网红视频表(tblcHBORC90WWn05): 默认跳过（飞书记录上限，放本地）
+  - 网红详情表(tbl<DETAIL>): 按 Channel ID upsert   ← 核心
+  - 搜索任务表(tbl<TASK>): 按 搜索关键词 upsert
+  - 视频数据表(tbl<VIDEO>): 按 Video ID upsert（搜索结果视频）
+  - 网红视频表(tbl<INFLUENCER_VIDEO>): 默认跳过（飞书记录上限，放本地）
 
 用法：
   ./.venv/bin/python sync_vyh0_upsert.py --dry-run      # 只统计，不写
@@ -30,10 +30,10 @@ BASE_TOKEN = os.environ.get("FEISHU_APP_TOKEN", "")
 BATCH = "output/20260819_182645_batch"
 
 TABLE_IDS = {
-    "网红详情表": "tbl4rnFUM9jJXvCQ",
-    "视频数据表": "tblDQi8dEGhkjZyy",
-    "网红视频表": "tblcHBORC90WWn05",
-    "搜索任务表": "tblLT1yf9ioEhJOh",
+    "网红详情表": os.environ.get("FEISHU_TABLE_DETAIL", ""),
+    "视频数据表": os.environ.get("FEISHU_TABLE_VIDEO", ""),
+    "网红视频表": os.environ.get("FEISHU_TABLE_INFLUENCER_VIDEO", ""),
+    "搜索任务表": os.environ.get("FEISHU_TABLE_TASK", ""),
 }
 
 # 每张表：本地 xlsx 文件、去重唯一键列、是否默认同步
@@ -315,7 +315,7 @@ def main():
         total_updated += up_ok
 
     print(f"\n🎉 完成。新建 {total_created} | 更新 {total_updated} | VyH0 存量记录零丢失")
-    print(f"   base 链接: https://pcn8zy4grswl.feishu.cn/base/{BASE_TOKEN}")
+    print(f"   base 链接: https://<your-tenant>.feishu.cn/base/{BASE_TOKEN}")
 
 
 if __name__ == "__main__":
