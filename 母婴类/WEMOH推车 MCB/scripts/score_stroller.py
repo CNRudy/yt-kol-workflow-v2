@@ -27,9 +27,10 @@ API = "https://www.googleapis.com/youtube/v3"
 PROXY = os.environ.get("HTTPS_PROXY", "http://127.0.0.1:7890")
 DATE = "20260904"
 XLSX_DETAIL = os.path.join(PROJ, "output", f"stroller_wagon_网红详情表_{DATE}.xlsx")
-BASE_TOKEN = "HFBkbxyQNa4pjYsrXOJcRwU5nHb"
-TID_DETAIL = "tblLhOXxrlq4r8VF"
-TID_RED = "tbllyO5EJiLsfT6E"
+# 原源库 HFBkb（推车旧库）已于 2026-09-07 被删除，2026-09-09 起指向现役库「WEMOH推车 MCB」
+BASE_TOKEN = "Yz9GbeSbfabon9sS1DKcNY25ngm"
+TID_DETAIL = "tblzPpg6Uj197wND"   # 网红详情表
+TID_RED = "tblIDj93S485Yn00"      # 红人表
 
 PROFILE_NAME = "stroller_wagon"
 # 飞书「匹配产品」单选字段已存在的精确选项值（须一字不差匹配）
