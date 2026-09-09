@@ -1,0 +1,15 @@
+title = "yt-kol-workflow secret scan config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Non-secrets: doc placeholders and Feishu Base app_token"
+# Feishu app_token is a public identifier baked into the Base URL.
+# It cannot be revoked or rotated - the real secrets are app_id/app_secret,
+# which must never be committed and are NOT covered by this allowlist.
+regexTarget = "line"
+regexes = [
+  '''AIzaSyX{10,}''',
+  '''BASE_TOKEN\s*=\s*"[A-Za-z0-9]{20,}"''',
+]
